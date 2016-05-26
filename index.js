@@ -25,9 +25,8 @@ function main() {
   });
 }
 
-
 function sendText(recepient) {
-  client.sms.messages.create({
+  client.messages.post({
     to: recepient,
     from: process.env.TWILIO_NUMBER,
     body: "Ahoy hoy! We have < 5GB on the server. Time to delete your shit!"
@@ -44,3 +43,4 @@ function sendText(recepient) {
     }
   });
 }
+
